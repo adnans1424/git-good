@@ -41,18 +41,16 @@ public class CoinsGame {
 
         data = new int[NUMofPlayers];
 
-        for(int i=0; i<players.length; i++){
+        for(int i=0; i<players.length; i++)
 
             data[i] = players[i].getCoins();
-        }
     }
 
     public void compare(){
 
-        for(int i=0; i<players.length; i++){
+        for(int i=0; i<players.length; i++)
 
             System.out.println("id #" + i + ": " + data[i] + " + " + (players[i].getCoins() - data[i]) + " = " + players[i].getCoins());
-        }
     }
 
     public void interactions(){
