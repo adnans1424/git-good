@@ -6,13 +6,13 @@ public class Fibonacci {
             System.err.println("Invalid Arguments");
             return;
         }
-
-        FibonacciCalculator fibonacciCalculator = new FibonacciCalculator();
-
-        for (int i = 0; i < n - 1; i++) {
-            System.out.print(fibonacciCalculator.calculate(i) + ", ");
+    
+        FibonacciGenerator fibonacciGenerator = new FibonacciGenerator(n);
+        
+        while (fibonacciGenerator.hasNext()) {
+            System.out.print(fibonacciGenerator.next() + ", ");
         }
-        System.out.println(fibonacciCalculator.calculate(n - 1));
+        System.out.println();
     }
 
     private static Integer parseArgs(String[] args) {
